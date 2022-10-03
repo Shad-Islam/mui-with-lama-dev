@@ -1,36 +1,19 @@
-import { Button, styled, Typography } from "@mui/material";
-import CodeIcon from "@mui/icons-material/Code";
-import { Code } from "@mui/icons-material";
+import { Box, Stack } from "@mui/material";
+import { Feed } from "./components /Feed";
+import { Navbar } from "./components /Navbar";
+import { Sidebar } from "./components /Sidebar";
+import { Rightbar } from "./components /Rightbar";
 
 function App() {
-  const OurButton = styled(Button)({
-    background: "yellow",
-    color: "#000",
-    margin: 5,
-    "&:hover": {
-      background: "red",
-      color: "#ffffff",
-    },
-    "&:disabled": {
-      background: "gray",
-      color: "#ffffff",
-    },
-  });
   return (
-    <div>
-      <Button variant="text">Text</Button>
-      <Button startIcon={<CodeIcon />} size="large" variant="outlined">
-        Contained
-      </Button>
-      <Button variant="outlined">Outlined</Button>
-      <Typography variant="h1" component="p">
-        Shad
-      </Typography>
-
-      <OurButton variant="outlined">My Button</OurButton>
-
-      <OurButton size="large">Mohsin Vai</OurButton>
-    </div>
+    <Box>
+      <Navbar />
+      <Stack direction="row" spacing={2}>
+        <Sidebar />
+        <Feed />
+        <Rightbar />
+      </Stack>
+    </Box>
   );
 }
 
