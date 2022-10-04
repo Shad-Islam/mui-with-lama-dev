@@ -7,6 +7,7 @@ export const Sidebar = () => {
       sx={{
         background: "red",
         p: 2,
+        display: { xs: "none", sm: "block" },
       }}
       flex={1}
     >

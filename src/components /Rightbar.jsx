@@ -7,6 +7,7 @@ export const Rightbar = () => {
       sx={{
         background: "green",
         p: 2,
+        display: { xs: "none", sm: "block" },
       }}
       flex={2}
     >
